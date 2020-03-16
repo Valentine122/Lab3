@@ -1,30 +1,13 @@
 package ua.lviv.iot.stuffForBar.model;
 
-import ua.lviv.iot.stuffForBar.model.ShapeOfIce;
-
 public class FormsForIce extends AbstractBar {
-    private int amountOfIce;
-    private ShapeOfIce shapeOfIce;
-
-    public int getAmountOfIce() {
-        return amountOfIce;
+    public FormsForIce(int priceInUAH) {
+        super(priceInUAH);
     }
 
-    public void setAmountOfIce(int amountOfIce) {
-        this.amountOfIce = amountOfIce;
+    @Override
+    protected int compare(float priceInUAH, float priceInUAH1) {
+        return 0;
     }
 
-    public ShapeOfIce getShapeOfIce() {
-        return shapeOfIce;
-    }
-
-    public void setShapeOfIce(ShapeOfIce shapeOfIce) {
-        this.shapeOfIce = shapeOfIce;
-    }
-
-    public FormsForIce(String material, float priceInUAH, int productionYear, String producerName, int weightInGrams, int amountOfIce, ShapeOfIce shapeOfIce) {
-        super(material, priceInUAH, productionYear, producerName, weightInGrams);
-        this.amountOfIce = amountOfIce;
-        this.shapeOfIce = shapeOfIce;
-    }
 }
