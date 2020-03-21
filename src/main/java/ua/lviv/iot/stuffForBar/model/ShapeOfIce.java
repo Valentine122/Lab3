@@ -1,6 +1,5 @@
 package ua.lviv.iot.stuffForBar.model;
 
-
 public enum ShapeOfIce {
-    TRIANGLE, SQUAR, STAR;
+    TRIANGLE, SQUAR, STAR, CIRCLE, GHOST
 }
