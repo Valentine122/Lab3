@@ -12,14 +12,14 @@ public class BarManager {
         this.stuffs.addAll(stuffs);
     }
 
-    public List<AbstractBar> findStuffForBarOfGlass(int priceInUAH) {
+    public List<AbstractBar> findStuffByShapeOfIceT(int priceInUAH) {
 
-        List<AbstractBar> stuffsOfGlass = new LinkedList<AbstractBar>();
-        for (AbstractBar price : stuffs) {
-            if (price.getPriceInUAH() > priceInUAH) {
-                stuffsOfGlass.add(price);
+        List<AbstractBar> result = new LinkedList<AbstractBar>();
+        for (AbstractBar stuff : stuffs) {
+            if (stuff.getPriceInUAH() > priceInUAH) {
+                result.add(stuff);
             }
         }
-        return stuffsOfGlass;
+        return result;
     }
 }
