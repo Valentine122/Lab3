@@ -1,34 +1,36 @@
-package ua.lviv.iot.stuffForBar.manger;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package ua.lviv.iot.stuffForBar.manager;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
+
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+
 import ua.lviv.iot.stuffForBar.model.AbstractBar;
-import ua.lviv.iot.stuffForBar.manager.BarManager;
-
-public class BarManagerTest extends BaseBarManger{
-
-        public BarManager barManager;
-
-        @BeforeEach
-        public void setUp() {
-            barManager = new BarManager();
-            barManager.addStuffs(avaialableBar);
-        }
 
 
+class BarManagerTest extends BaseBarManagerTest {
 
-        @Test
-        public void testFindStuffForBarOfGlass() {
-            List<AbstractBar> stuffOfGlass = barManager.findStuffForBarOfGlass(203);
-            Assertions.assertEquals(4, stuffOfGlass.size());
-            Assertions.assertEquals(253, stuffOfGlass.get(0).getPriceInUAH());
-            Assertions.assertEquals(243, stuffOfGlass.get(1).getPriceInUAH());
-            Assertions.assertEquals(223, stuffOfGlass.get(2).getPriceInUAH());
-            Assertions.assertEquals(433, stuffOfGlass.get(3).getPriceInUAH());
-        }
+    private BarManager barManager;
+
+    @BeforeEach
+    public void setUp() {
+        barManager = new BarManager();
+        barManager.addStuffs(organizersForTheBar);
+
+    }
+
+    @Test
+    public void testFindStuffByShapeOfIceT() {
+        List<AbstractBar> stuffT = barManager.findStuffByShapeOfIceT(10);
+        Assertions.assertEquals(6, stuffT.size());
+        Assertions.assertEquals(500, stuffT.get(0).getPriceInUAH());
+        Assertions.assertEquals(335, stuffT.get(1).getPriceInUAH());
+
+
+    }
+
 }
