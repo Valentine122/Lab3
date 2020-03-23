@@ -21,5 +21,3 @@ public class IceBuckets extends AbstractBar {
     }
 
 }
-
-

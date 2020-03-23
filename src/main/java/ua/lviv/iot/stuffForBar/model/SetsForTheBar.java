@@ -21,5 +21,3 @@ public class SetsForTheBar extends AbstractBar {
     }
 
 }
-
-

@@ -26,5 +26,3 @@ public class BarManager {
         return result;
     }
 }
-
-

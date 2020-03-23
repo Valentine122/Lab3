@@ -18,6 +18,7 @@ public class BarManagerUtils {
             return firstStuff.getPriceInUAH() - secondStuff.getPriceInUAH();
         }
     }
+
     private class PopularSorterByShapeOfIce implements Comparator<AbstractBar> {
         @Override
         public int compare(AbstractBar firstStuff, AbstractBar secondStuff) {
@@ -25,6 +26,7 @@ public class BarManagerUtils {
         }
 
     }
+
     public static void sortByPriceInUAH(List<AbstractBar> stuffs, SortType sortType) {
 
         stuffs.sort(sortType == SortType.ASCENDING ? STUFF_BY_PRICE_IN_UAH_SORTER : STUFF_BY_PRICE_IN_UAH_SORTER.reversed());
@@ -56,7 +58,9 @@ public class BarManagerUtils {
     public static void sortByProductionYear(List<AbstractBar> stuffs, SortType sortType) {
         if (sortType == SortType.ASCENDING) {
             stuffs.sort(Comparator.comparingInt(AbstractBar::getProductionYear));
-        } else stuffs.sort(Comparator.comparingInt(AbstractBar::getProductionYear));
+        } else {
+            stuffs.sort(Comparator.comparingInt(AbstractBar::getProductionYear));
 
+        }
     }
 }
