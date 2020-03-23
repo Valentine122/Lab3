@@ -1,3 +1,5 @@
+package ua.lviv.iot.stuffForBar.model;
+
 public class IceBuckets extends AbstractBar {
 private int volumInLiters;
 private int amountOfBottles;
