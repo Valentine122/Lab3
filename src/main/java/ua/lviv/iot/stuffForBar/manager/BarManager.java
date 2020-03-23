@@ -20,7 +20,7 @@ public class BarManager {
                 result.add(stuff);
             }
         }
-        return result;
+        return result;as
     }
 }
 
