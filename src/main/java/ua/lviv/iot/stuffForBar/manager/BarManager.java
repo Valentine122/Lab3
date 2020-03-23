@@ -11,6 +11,9 @@ public class BarManager {
     public void addStuffs(List<AbstractBar> stuffs) {
         this.stuffs.addAll(stuffs);
     }
+    public void addStuff(AbstractBar stuff){
+        this.stuffs.add(stuff);
+    }
 
     public List<AbstractBar> findStuffByShapeOfIceT(int priceInUAH) {
 
@@ -20,7 +23,8 @@ public class BarManager {
                 result.add(stuff);
             }
         }
-        return result;as
+        return result;
     }
 }
+
 
