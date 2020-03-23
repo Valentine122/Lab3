@@ -34,9 +34,18 @@ public abstract class AbstractBar implements Comparable<AbstractBar> {
         return productionYear;
     }
 
+    public String getCubes(){
+        return "priceInUAH, shapeOfIce, productionYear";
+    }
+
+    public String toWhiskey(){
+        return getPriceInUAH() + ", " + getShapeOfIce() + ", " + getProductionYear();
+    }
+
     @Override
     public int compareTo(AbstractBar another) {
         return compare(this.getPriceInUAH(), another.getPriceInUAH());
     }
 
 }
+
