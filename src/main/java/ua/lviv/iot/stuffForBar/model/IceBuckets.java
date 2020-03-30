@@ -12,12 +12,12 @@ public class IceBuckets extends AbstractBar {
         return numOfBottles;
     }
 
-    public String getCubes(){
-        return super.getCubes() + ", " + "numOfBottles";
+    public String getHeaders(){
+        return super.getHeaders() + ", " + "numOfBottles";
     }
 
-    public String toWhiskey() {
-        return super.toWhiskey() + ", " + getNumOfBottles();
+    public String toCSV() {
+        return super.toCSV() + ", " + getNumOfBottles();
     }
 
 }

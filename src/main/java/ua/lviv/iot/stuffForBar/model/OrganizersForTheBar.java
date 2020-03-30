@@ -6,12 +6,12 @@ public class OrganizersForTheBar extends AbstractBar {
 
     }
 
-    public String getCubes(){
-        return super.getCubes() + ", " + "shapeOfIce";
+    public String getHeaders(){
+        return super.getHeaders() + ", " + "shapeOfIce";
     }
 
-    public String toWhiskey(){
-        return super.toWhiskey() + ", " + getShapeOfIce();
+    public String toCSV(){
+        return super.toCSV() + ", " + getShapeOfIce();
     }
 
 }

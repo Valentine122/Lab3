@@ -8,14 +8,14 @@ public class FormsForIce extends AbstractBar {
 
     }
 
-   public String getCubes(){
-       return super.getCubes() + ", " + "volume";
+   public String getHeaders(){
+       return super.getHeaders() + ", " + "volume";
    }
 
    public int getVolume(){
        return volume;
    }
-   public String toWhiskey(){
-       return super.toWhiskey() + ", " + getVolume();
+   public String toCSV(){
+       return super.toCSV() + ", " + getVolume();
    }
 }

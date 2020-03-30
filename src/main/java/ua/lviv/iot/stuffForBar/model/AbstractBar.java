@@ -34,11 +34,11 @@ public abstract class AbstractBar implements Comparable<AbstractBar> {
         return productionYear;
     }
 
-    public String getCubes(){
+    public String getHeaders(){
         return "priceInUAH, shapeOfIce, productionYear";
     }
 
-    public String toWhiskey(){
+    public String toCSV(){
         return getPriceInUAH() + ", " + getShapeOfIce() + ", " + getProductionYear();
     }
 

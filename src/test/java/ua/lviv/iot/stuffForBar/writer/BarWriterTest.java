@@ -12,9 +12,9 @@ public class BarWriterTest extends BaseBarManagerTest {
 
     @Test
     public void testWriter(){
-        try(Writer file = new FileWriter("Bar.whiskey")){
+        try(Writer file = new FileWriter("Bar.csv")){
             BarWriter writer = new BarWriter();
-            writer.setWhiskeyWriter(file);
+            writer.setCsvWriter(file);
             writer.writeToFile(organizersForTheBar);
         }catch (Exception n) {
             fail("*****The testWriter FAILED******");
@@ -23,14 +23,14 @@ public class BarWriterTest extends BaseBarManagerTest {
 
     @Test
     public void testFormating(){
-        try(Writer whiskeyWriter = new StringWriter()){
+        try(Writer csvWriter = new StringWriter()){
             BarWriter writer = new BarWriter();
-            writer.setWhiskeyWriter(whiskeyWriter);
+            writer.setCsvWriter(csvWriter);
             writer.writeToFile(organizersForTheBar);
             String textWriter = "";
 
             for (AbstractBar stuff : organizersForTheBar) {
-                textWriter += stuff.getCubes() + ", " + stuff.toWhiskey() + "\r\n";
+                textWriter += stuff.getHeaders() + ", " + stuff.toCSV() + "\r\n";
 
             }
             Assertions.assertEquals(textWriter, writer.stringWriter());

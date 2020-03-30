@@ -12,12 +12,12 @@ public class SetsForTheBar extends AbstractBar {
         return numOfSets;
     }
 
-    public String getCubes(){
-        return super.getCubes() + ", " + "numOfSets";
+    public String getHeaders(){
+        return super.getHeaders() + ", " + "numOfSets";
     }
 
-    public String toWhiskey(){
-        return super.toWhiskey() + ", " + getNumOfSets();
+    public String toCSV(){
+        return super.toCSV() + ", " + getNumOfSets();
     }
 
 }
