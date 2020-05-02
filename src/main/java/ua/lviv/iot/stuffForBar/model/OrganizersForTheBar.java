@@ -1,30 +1,32 @@
 package ua.lviv.iot.stuffForBar.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class OrganizersForTheBar extends AbstractBar {
 
-private int numberOfCompartments;
-    
+    public OrganizersForTheBar(){
 
-public int getNumberOfCompartments() {
+    }
+    public OrganizersForTheBar(int priceInUAH, ShapeOfIce shapeOfIce, int productionYear, String producer) {
+        super(priceInUAH, shapeOfIce, productionYear, producer);
 
-return numberOfCompartments;
+    }
 
-}
-    
+    public OrganizersForTheBar(int priceInUAH, ShapeOfIce shapeOfIce, int productionYear) {
+        super(priceInUAH, shapeOfIce, productionYear, null);
 
-public void setNumberOfCompartments(int numberOfCompartments) {
+    }
 
-this.numberOfCompartments = numberOfCompartments;
+    //public String getHeaders(){
+    //    return super.getHeaders() + ", " + "shapeOfIce";
+   // }
 
-}
-
-public OrganizersForTheBar(String material, float priceInUAH, int productionYear, String producerName, int weightInGrams, int numberOfCompartments) {
-
-super(material, priceInUAH, productionYear, producerName, weightInGrams);
-
-this.numberOfCompartments = numberOfCompartments;
-
- }
+    public String toCSV(){
+        return super.toCSV() + ", " + getShapeOfIce();
+    }
 
 }

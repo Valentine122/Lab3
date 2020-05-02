@@ -2,56 +2,23 @@ package ua.lviv.iot.stuffForBar.model;
 
 
 public class SetsForTheBar extends AbstractBar {
+    private int numOfSets;
 
-private int numberOfItemsInPerSet;
+    public SetsForTheBar(int priceInUAH, ShapeOfIce shapeOfIce, int productionYear) {
+        super(priceInUAH, shapeOfIce, productionYear);
 
-private String amountOfStuffs;
+    }
 
+    public int getNumOfSets(){
+        return numOfSets;
+    }
 
+    public String getHeaders(){
+        return super.getHeaders() + ", " + "numOfSets";
+    }
 
-public int getNumberOfItemsInPerSet() {
-
-return numberOfItemsInPerSet;
-
-}
-
-
-
-public void setNumberOfItemsInPerSet(int numberOfItemsInPerSet) {
-
-this.numberOfItemsInPerSet = numberOfItemsInPerSet;
-
-}
-
-
-
-public String getAmountOfStuffs() {
-
-return amountOfStuffs;
+    public String toCSV(){
+        return super.toCSV() + ", " + getNumOfSets();
+    }
 
 }
-
-
-
-public void setAmountOfStuffs(String amountOfStuffs) {
-
-this.amountOfStuffs = amountOfStuffs;
-
-}
-
-
-
-public SetsForTheBar(String material, float priceInUAH, int productionYear, String producerName, int weightInGrams, int numberOfItemsInPerSet, String amountOfStuffs) {
-
-super(material, priceInUAH, productionYear, producerName, weightInGrams);
-
-this.numberOfItemsInPerSet = numberOfItemsInPerSet;
-
-this.amountOfStuffs = amountOfStuffs;
-
-}
-
-
-
-}
-
