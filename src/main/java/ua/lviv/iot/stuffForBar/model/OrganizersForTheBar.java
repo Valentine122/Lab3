@@ -8,6 +8,8 @@ import javax.persistence.Id;
 @Entity
 public class OrganizersForTheBar extends AbstractBar {
 
+    private String organizersForTheBar;
+
     public OrganizersForTheBar(){
 
     }
@@ -29,4 +31,12 @@ public class OrganizersForTheBar extends AbstractBar {
         return super.toCSV() + ", " + getShapeOfIce();
     }
 
+    public void setOrganizersForTheBar(String organizersForTheBar) {
+        this.organizersForTheBar = organizersForTheBar;
+    }
+
+    @Id
+    public String getOrganizersForTheBar() {
+        return organizersForTheBar;
+    }
 }
