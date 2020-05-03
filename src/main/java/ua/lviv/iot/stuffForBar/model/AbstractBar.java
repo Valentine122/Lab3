@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 import static java.lang.Integer.compare;
 
+@Entity
 public abstract class AbstractBar implements Comparable<AbstractBar> {
     private int priceInUAH;
     private ShapeOfIce shapeOfIce;
